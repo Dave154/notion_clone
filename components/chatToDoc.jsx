@@ -13,6 +13,7 @@ import {Button} from "@/components/ui/button";
 import {toast} from "sonner";
 import {Input} from "@/components/ui/input";
 import { BotIcon, MessageCircleCode } from 'lucide-react';
+import Markdown from 'react-markdown';
 
 const ChatToDoc = ({doc}) => {
 	const [input, setInput] = useState('');
