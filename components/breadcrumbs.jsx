@@ -27,14 +27,7 @@ const Breadcrumbs = () => {
                         const href= `/${segments.slice(0,index + 1).join('/')}`;
                         return <Fragment key={segment}>
                             <BreadcrumbSeparator />
-                            {
-                                index === segments.length -1? <BreadcrumbPage>{segment}</BreadcrumbPage>
-                                    :
-                                    <BreadcrumbItem>
-                                        <BreadcrumbLink href={href}>{segment}</BreadcrumbLink>
-                                    </BreadcrumbItem>
-                            }
-
+                             <BreadcrumbPage>{segment}</BreadcrumbPage>
                         </Fragment>
 
                     })
