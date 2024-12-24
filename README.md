@@ -69,8 +69,8 @@ A feature-rich **Notion-like clone** with real-time collaboration, AI-powered su
 
    ```env
    AUTH_SECRET
-   AUTH_GITHUB_ID= 
-   AUTH_GITHUB_SECRET=
+   AUTH_GITHUB_ID
+   AUTH_GITHUB_SECRET
    AUTH_GOOGLE_ID
    AUTH_GOOGLE_SECRET
    NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY
