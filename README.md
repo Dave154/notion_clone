@@ -54,7 +54,7 @@ A feature-rich **Notion-like clone** with real-time collaboration, AI-powered su
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-repo-url/notion-clone.git
+   git clone https://github.com/Dave154/notion-clone.git
    cd notion-clone
    ```
 
@@ -65,7 +65,7 @@ A feature-rich **Notion-like clone** with real-time collaboration, AI-powered su
    ```
 
 3. **Set up environment variables:**
-   Create a `.env` file in the root directory and configure the following:
+   in your `.env` file in the root directory and configure the following:
 
    ```env
    AUTH_SECRET
@@ -138,15 +138,4 @@ Contributions are welcome! Please follow these steps:
 ## License
 
 This project is licensed under the MIT License.
-
----
-
-## Acknowledgments
-
-- **Next.js** for its amazing framework.
-- **Tailwind CSS** for simplified styling.
-- **Liveblocks** for enabling real-time collaboration.
-- **Firebase** for backend services.
-- **Cloudflare Workers** for AI summarization and translation.
-- **OpenAI** for the Chat-to-Document feature.
 
