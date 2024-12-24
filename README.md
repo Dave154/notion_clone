@@ -1,5 +1,12 @@
 # Notion Clone
 
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![Next.JS](https://img.shields.io/badge/Next.JS-black)
+![Tailwind CSS](https://img.shields.io/badge/Styling-Tailwind%20CSS-06B6D4)
+![Shadcn](https://img.shields.io/badge/Shadcn--UI-1c1c1c)
+![LiveBlocks](https://img.shields.io/badge/LiveBlocks-0081CB)
+![Vercel](https://img.shields.io/badge/Hosting-Vercel-black)
+
 A feature-rich **Notion-like clone** with real-time collaboration, AI-powered summarization, translation, and document analysis. This project aims to bring seamless collaboration and intelligent document interaction to users.
 
 [Live Link](https://notion-clone-iota-three.vercel.app)
