@@ -2,11 +2,12 @@
 import {auth} from "@/auth";
 import {adminDb} from "@/firebase-admin";
 import liveblocks from "@/lib/liveblocks";
-
+import { redirect } from "next/navigation";
 export const createNewDocument = async()=>{
     const session = await auth()
    const user = session?.user
     if(!session || !session.user){
+      redirect('/login')
         return;
 
     }

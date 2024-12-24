@@ -2,12 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/auth";
 import liveblocks from "@/lib/liveblocks";
 import { adminDb } from "@/firebase-admin";
-
+import { redirect } from "next/navigation";
 export async function POST(req) {
     try {
         // Authenticate the user
         const session = await auth();
-        console.log("Access Token:", session);
 
         if (!session || !session.user) {
             return NextResponse.json(

@@ -9,7 +9,7 @@ const NewDocumentButton = () => {
     const router= useRouter()
 
     const [isPending, startTransition]=useTransition()
-    const handleCreateNewDocument=()=>{
+    const handleCreateNewDocument=async()=>{
         startTransition(async()=>{
                 const {docId} =await createNewDocument()
                 router.push(`/doc/${docId}`)
@@ -17,7 +17,7 @@ const NewDocumentButton = () => {
     }
 
     return (
-        <Button onClick={handleCreateNewDocument} disabled={isPending}>
+        <Button onClick={handleCreateNewDocument} disabled={isPending} className='bg-primary'>
             {isPending ? 'Creating...' : ' New Document'}
         </Button>
     )

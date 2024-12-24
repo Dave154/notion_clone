@@ -8,7 +8,6 @@ const SidebarOption = ({href,id}) => {
     const [data,loading,error] = useDocumentData(doc(db,'documents',id));
     const pathname= usePathname()
     const isActive= href.includes(pathname) && pathname !== '/'
-    console.log(href,pathname,isActive)
     if(!data) return null;
     return (
             <Link href={href} className={`relative border p-2 rounded-md 

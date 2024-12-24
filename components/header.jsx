@@ -7,14 +7,20 @@ import  Link from 'next/link'
 import Breadcrumbs from "@/components/breadcrumbs";
 const Header = async () => {
     const session = await auth()
+  const name = session?.user.name.split(' ')[0]
     return (
        <header className=''>
                    <nav className='flex items-center justify-between p-3'>
                        {
 
-                           session?.user && <Link href='/' className='font-bold text-2xl'>{session.user?.name}{`'s`} Space</Link>
+                           session?.user ?
+                         <>
+                           <Link href='/' className='font-bold text-lg'>{name}{`'s`} Space</Link>
+                           <Breadcrumbs/>
+
+                         </> : <p> </p>
                        }
-                        <Breadcrumbs/>
+
 
                        <div className=''>
                            {
@@ -37,13 +43,11 @@ const Header = async () => {
 
 
                                    :
-                                   <Form action={async()=>{
-                                       'use server';
-                                       await signIn()
-                                   }}>
-                                       <Button>SignIn</Button>
+                                  <Form action='/login'>
+                                    <Button>SignIn</Button>
+                                  </Form>
 
-                                   </Form>
+
 
                            }
                        </div>

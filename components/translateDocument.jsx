@@ -34,25 +34,31 @@ const TranslateDocument = ({doc}) => {
 		e.preventDefault()
 		startTransition(async()=>{
 			const documentData = doc.get("document-store").toJSON()
-			const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}translateDocument`, {
-					method:'POST',
-					headers:{
-						"Content-type":"application/json"
-					},
-					body:JSON.stringify({
-						documentData,
-						targetLang:language
-					})
+			try{
+				const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}translateDocument`, {
+						method:'POST',
+						headers:{
+							"Content-type":"application/json"
+						},
+						body:JSON.stringify({
+							documentData,
+							targetLang:language
+						})
+					}
+
+				)
+				if(res.ok){
+					const {translated_text} = await res.json()
+					setSummary(translated_text)
+					toast.success('Translated Summary Successfully')
+
+				}else{
+					console.log(res)
+					toast.error('Something went wrong Try again!')
 				}
 
-		)
-			if(res.ok){
-				const {translated_text} = await res.json()
-				setSummary(translated_text)
-				toast.success('Translated Summary Successfully')
-
-			}else{
-				console.log(res)
+			}catch (e) {
+				console.log(e)
 				toast.error('Something went wrong Try again!')
 			}
 		})
