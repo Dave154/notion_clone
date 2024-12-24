@@ -1,5 +1,12 @@
 # Notion Clone
 
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![Next.JS](https://img.shields.io/badge/Next.JS-black)
+![Tailwind CSS](https://img.shields.io/badge/Styling-Tailwind%20CSS-06B6D4)
+![Shadcn](https://img.shields.io/badge/Shadcn--UI-1c1c1c)
+![LiveBlocks](https://img.shields.io/badge/LiveBlocks-0081CB)
+![Vercel](https://img.shields.io/badge/Hosting-Vercel-black)
+
 A feature-rich **Notion-like clone** with real-time collaboration, AI-powered summarization, translation, and document analysis. This project aims to bring seamless collaboration and intelligent document interaction to users.
 
 [Live Link](https://notion-clone-iota-three.vercel.app)
@@ -54,7 +61,7 @@ A feature-rich **Notion-like clone** with real-time collaboration, AI-powered su
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-repo-url/notion-clone.git
+   git clone https://github.com/Dave154/notion-clone.git
    cd notion-clone
    ```
 
@@ -65,12 +72,12 @@ A feature-rich **Notion-like clone** with real-time collaboration, AI-powered su
    ```
 
 3. **Set up environment variables:**
-   Create a `.env` file in the root directory and configure the following:
+   in your `.env` file in the root directory and configure the following:
 
    ```env
    AUTH_SECRET
-   AUTH_GITHUB_ID= 
-   AUTH_GITHUB_SECRET=
+   AUTH_GITHUB_ID
+   AUTH_GITHUB_SECRET
    AUTH_GOOGLE_ID
    AUTH_GOOGLE_SECRET
    NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY
@@ -138,15 +145,4 @@ Contributions are welcome! Please follow these steps:
 ## License
 
 This project is licensed under the MIT License.
-
----
-
-## Acknowledgments
-
-- **Next.js** for its amazing framework.
-- **Tailwind CSS** for simplified styling.
-- **Liveblocks** for enabling real-time collaboration.
-- **Firebase** for backend services.
-- **Cloudflare Workers** for AI summarization and translation.
-- **OpenAI** for the Chat-to-Document feature.
 
