@@ -1,7 +1,7 @@
 import {initializeApp,getApps,App,getApp,cert} from 'firebase-admin/app';
 import {getFirestore} from 'firebase-admin/firestore'
-// const serviceKey = JSON.parse(process.env.SERVICE_KEY); //Production
- const serviceKey = require("@/service_key.json"); // Development
+const serviceKey = JSON.parse(process.env.SERVICE_KEY); // Production
+//  const serviceKey = require("@/service_key.json"); // Development
 
 let app;
 if(getApps().length === 0){
